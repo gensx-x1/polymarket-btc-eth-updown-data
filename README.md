@@ -18,11 +18,11 @@ this repo is final and won't change.
 |                      |                                   |
 | -------------------- | --------------------------------- |
 | **Start of data**    | **2026-08-06 10:43:07 UTC** |
-| **End of data**      | **2026-08-13 12:29:59 UTC** |
-| **Total snapshots**  | 2,431,404 rows |
+| **End of data**      | **2026-08-16 02:44:59 UTC** |
+| **Total snapshots**  | 3,243,156 rows |
 | **Assets tracked**   | BTC, ETH |
 | **Window lengths**   | 5-minute and 15-minute |
-| **Last updated**     | 2026-08-13 13:57:58 UTC |
+| **Last updated**     | 2026-08-16 02:48:41 UTC |
 
 *Updated automatically every time a database fills to 200 MB and is sealed; the
 dates above reflect the latest published file.*
@@ -37,6 +37,7 @@ compressed with zstd. Click a file below, or download directly:
 | [`pm_btc_eth_5m_15m_20260806T104307Z_0000.db.zst`](databases/pm_btc_eth_5m_15m_20260806T104307Z_0000.db.zst) | 2026-08-06 → 2026-08-08 | 805,308 | 200.5 MB | 23.7 MB | 8.4× |
 | [`pm_btc_eth_5m_15m_20260808T190001Z_0001.db.zst`](databases/pm_btc_eth_5m_15m_20260808T190001Z_0001.db.zst) | 2026-08-08 → 2026-08-11 | 816,040 | 200.3 MB | 23.4 MB | 8.6× |
 | [`pm_btc_eth_5m_15m_20260811T040001Z_0002.db.zst`](databases/pm_btc_eth_5m_15m_20260811T040001Z_0002.db.zst) | 2026-08-11 → 2026-08-13 | 810,056 | 200.6 MB | 24.0 MB | 8.3× |
+| [`pm_btc_eth_5m_15m_20260813T123001Z_0003.db.zst`](databases/pm_btc_eth_5m_15m_20260813T123001Z_0003.db.zst) | 2026-08-13 → 2026-08-16 | 811,752 | 200.5 MB | 24.5 MB | 8.2× |
 
 ```bash
 # download one file
@@ -56,7 +57,7 @@ Each `.db` is compressed with **[zstd](https://github.com/facebook/zstd)** at le
 files in [`databases/`](databases).
 
 - **Why compress at all.** A raw database is ~200 MB. SQLite files full of repetitive
-  numeric ticks shrink dramatically — here about **8.5×** (≈200 MB → ~24 MB),
+  numeric ticks shrink dramatically — here about **8.4×** (≈200 MB → ~24 MB),
   so downloads are far faster and each file stays well under GitHub's 100 MB limit.
 - **Why zstd specifically.** It gives near-gzip-or-better ratios while decompressing
   extremely fast (hundreds of MB/s), so unpacking takes a moment. Level `6`
